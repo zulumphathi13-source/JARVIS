@@ -15,7 +15,7 @@ while True:
 
     
     response = client.responses.create(
-        model="gpt-5.6-luna",
+        model="gpt-6-luna",
         instructions="""
 You are JARVIS, a sophisticated personal AI assistant
 inspired by Tony Stark's AI butler.
