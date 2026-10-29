@@ -47,4 +47,5 @@ Prioritise accuracy, privacy, and safety.
 """,
         input=user
     )
-    
+     print("JARVIS:", response.output_text)
+
