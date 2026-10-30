@@ -25,6 +25,17 @@ HTML = """
         <h3>JARVIS:</h3>
         <p>{{ response }}</p>
     {% endif %}
+<script>
+const reply = {{ response|tojson }};
+
+if (reply && 'speechSynthesis' in window) {
+    const voice = new SpeechSynthesisUtterance(reply);
+    voice.lang = 'en-US';
+    voice.rate = 0.9;
+    voice.pitch = 0.85;
+    speechSynthesis.speak(voice);
+}
+</script>
 </body>
 </html>
 """
